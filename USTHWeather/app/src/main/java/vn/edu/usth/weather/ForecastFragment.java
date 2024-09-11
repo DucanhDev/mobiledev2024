@@ -20,29 +20,29 @@ public class ForecastFragment extends Fragment {
         linearLayout.setOrientation(LinearLayout.VERTICAL);
 
 
-        TextView textView = new TextView(getContext());
-        textView.setText("Thursday:");
-        textView.setTextSize(35);
-        textView.setTextColor(0xFF000000);
-        textView.setPadding(16, 16, 16, 16);
-
-
-        ImageView imageView = new ImageView(getContext());
-        imageView.setPadding(100, 0, 0, 0);
-        imageView.setImageResource(R.drawable.cloudy_1);
-
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-        );
-        imageView.setLayoutParams(layoutParams);
-
-        linearLayout.addView(textView);
-        linearLayout.addView(imageView);
-
-
-        int backgroundColor = 0xFFFFC0CB;
-        linearLayout.setBackgroundColor(backgroundColor);
+//        TextView textView = new TextView(getContext());
+//        textView.setText("Thursday:");
+//        textView.setTextSize(35);
+//        textView.setTextColor(0xFF000000);
+//        textView.setPadding(16, 16, 16, 16);
+//
+//
+//        ImageView imageView = new ImageView(getContext());
+//        imageView.setPadding(100, 0, 0, 0);
+//        imageView.setImageResource(R.drawable.cloudy_1);
+//
+//        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+//                LinearLayout.LayoutParams.WRAP_CONTENT,
+//                LinearLayout.LayoutParams.WRAP_CONTENT
+//        );
+//        imageView.setLayoutParams(layoutParams);
+//
+//        linearLayout.addView(textView);
+//        linearLayout.addView(imageView);
+//
+//
+//        int backgroundColor = 0xFFFFC0CB;
+//        linearLayout.setBackgroundColor(backgroundColor);
 
         return linearLayout;
     }

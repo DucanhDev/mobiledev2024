@@ -5,10 +5,351 @@
     android:layout_height="match_parent"
     tools:context=".ForecastFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Create 10 rows using LinearLayout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DDDDDD"
+            android:orientation="vertical">
+
+            <!-- Row 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Column 1 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#DDDDDD"
+                    android:padding="8dp"
+                    android:text="Mon" />
+
+                <!-- Column 2 -->
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/sun_4478387"
+                    android:padding="8dp" />
+
+                <!-- Column 3 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="#DDDDDD"
+                    android:padding="8dp"
+                    android:text="Sunny\n32C-35C" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Column 1 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#DDDDDD"
+                    android:padding="8dp"
+                    android:text="Tue" />
+
+                <!-- Column 2 -->
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/rain_6421608"
+                    android:padding="8dp"
+                    android:text="" />
+
+                <!-- Column 3 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="#DDDDDD"
+                    android:padding="8dp"
+                    android:text="Rainy\n25C-28C" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Column 1 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#DDDDDD"
+                    android:padding="8dp"
+                    android:text="Wed" />
+
+                <!-- Column 2 -->
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/cloudy_1"
+                    android:padding="8dp"
+                    android:text="" />
+
+                <!-- Column 3 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="#DDDDDD"
+                    android:padding="8dp"
+                    android:text="Cloudy\n20C-21C" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Column 1 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#DDDDDD"
+                    android:padding="8dp"
+                    android:text="Thur" />
+
+                <!-- Column 2 -->
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/storm_1207658"
+                    android:padding="8dp"
+                    android:text="" />
+
+                <!-- Column 3 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="#DDDDDD"
+                    android:padding="8dp"
+                    android:text="Stormy\n18C" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Column 1 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#DDDDDD"
+                    android:padding="8dp"
+                    android:text="Fri" />
+
+                <!-- Column 2 -->
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/storm_5265651"
+                    android:padding="8dp"
+                    android:text="" />
+
+                <!-- Column 3 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="#DDDDDD"
+                    android:padding="8dp"
+                    android:text="Thunder Storm\n18C-20C" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Column 1 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#DDDDDD"
+                    android:padding="8dp"
+                    android:text="Sat" />
+
+                <!-- Column 2 -->
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/sun_4478387"
+                    android:padding="8dp"
+                    android:text="" />
+
+                <!-- Column 3 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="#DDDDDD"
+                    android:padding="8dp"
+                    android:text="Sunny\n40C-41C" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Column 1 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#DDDDDD"
+                    android:padding="8dp"
+                    android:text="Sun" />
+
+                <!-- Column 2 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/cloudy_1"
+                    android:padding="8dp"
+                    android:text="" />
+
+                <!-- Column 3 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="#DDDDDD"
+                    android:padding="8dp"
+                    android:text="Cloudy\n28C-30C" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Column 1 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#DDDDDD"
+                    android:padding="8dp"
+                    android:text="Mon" />
+
+                <!-- Column 2 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/sun_4478387"
+                    android:padding="8dp"
+                    android:text="" />
+
+                <!-- Column 3 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="#DDDDDD"
+                    android:padding="8dp"
+                    android:text="Sunny\n33C-35C" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Column 1 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#DDDDDD"
+                    android:padding="8dp"
+                    android:text="Tue" />
+
+                <!-- Column 2 -->
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/rain_6421608"
+                    android:padding="8dp"
+                    android:text="" />
+
+                <!-- Column 3 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="#DDDDDD"
+                    android:padding="8dp"
+                    android:text="Rainy\n25C-26C" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Column 1 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#DDDDDD"
+                    android:padding="8dp"
+                    android:text="Wed" />
+
+                <!-- Column 2 -->
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/cloudy_1"
+                    android:padding="8dp"
+                    android:text="" />
+
+                <!-- Column 3 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="#DDDDDD"
+                    android:padding="8dp"
+                    android:text="Cloudy\n21C" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
 
 </FrameLayout>
