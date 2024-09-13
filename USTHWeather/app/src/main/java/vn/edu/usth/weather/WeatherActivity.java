@@ -1,60 +1,50 @@
+
 package vn.edu.usth.weather;
 
 import android.os.Bundle;
-import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 public class WeatherActivity extends AppCompatActivity {
-
-    private static final String TAG = "WeatherActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_weather2);
-        Log.i(TAG, "onCreate");
+        setContentView(R.layout.activity_weather);
 
-
-        ForecastFragment forecastFragment = new ForecastFragment();
-
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-
-        fragmentTransaction.add(R.id.container, forecastFragment);
-        fragmentTransaction.commit();
+        ViewPager viewPager = findViewById(R.id.viewPager);
+        WeatherPagerAdapter adapter = new WeatherPagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(adapter);
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.i(TAG, "onStart");
-    }
+    private class WeatherPagerAdapter extends FragmentPagerAdapter {
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.i(TAG, "onResume");
-    }
+        public WeatherPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.i(TAG, "onPause");
-    }
+        @Override
+        public Fragment getItem(int position) {
+            switch (position) {
+                case 0:
+                    // First fragment for Paris
+                    return WeatherAndForecastFragment.newInstance("Ha Noi", "Sunny", R.layout.hanoi_fragment_weather);
+                case 1:
+                    // Second fragment for New York
+                    return WeatherAndForecastFragment.newInstance("New York", "Sunny", R.layout.newyork_fragment_weather);
+                case 2:
+                    // Third fragment for Tokyo
+                    return WeatherAndForecastFragment.newInstance("Dubai", "Rainy", R.layout.dubai_fragment_weather);
+                default:
+                    return null;
+            }
+        }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.i(TAG, "onStop");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.i(TAG, "onDestroy");
+        @Override
+        public int getCount() {
+            return 3;
+        }
     }
 }

@@ -1,47 +1,47 @@
 package vn.edu.usth.weather;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 public class WeatherFragment extends Fragment {
 
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private String location;
+    private String weatherCondition;
+    private int layoutResource;
 
-    private String mParam1;
-    private String mParam2;
 
-    public WeatherFragment() {
-        // Required empty public constructor
-    }
-
-    public static WeatherFragment newInstance(String param1, String param2) {
+    public static WeatherFragment newInstance(String location, String weatherCondition, int layoutResource) {
         WeatherFragment fragment = new WeatherFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putString("location", location);
+        args.putString("weatherCondition", weatherCondition);
+        args.putInt("layoutResource", layoutResource);
         fragment.setArguments(args);
         return fragment;
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            location = getArguments().getString("location");
+            weatherCondition = getArguments().getString("weatherCondition");
+            layoutResource = getArguments().getInt("layoutResource");
         }
-    }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_weather, container, false);
+
+        View view = inflater.inflate(layoutResource, container, false);
+
+        TextView locationTextView = view.findViewById(R.id.weather_location);
+        TextView conditionTextView = view.findViewById(R.id.weather_condition);
+        TextView temperatureTextView = view.findViewById(R.id.weather_temperature);
+
+        locationTextView.setText(location);
+        conditionTextView.setText(weatherCondition);
+
+        return view;
     }
 }

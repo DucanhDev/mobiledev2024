@@ -2,15 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#A8E6A6"
+    android:background="#ADD8E6"
     android:padding="16dp">
-
 
     <TextView
         android:id="@+id/weather_temperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="12C"
+        android:text="21°C"
         android:textSize="28sp"
         android:textColor="@android:color/black"
         android:textStyle="bold" />
@@ -19,7 +18,7 @@
         android:id="@+id/weather_condition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sunny"
+        android:text="Rainy"
         android:textSize="20sp"
         android:textColor="@android:color/black"
         android:layout_below="@id/weather_temperature"
@@ -27,22 +26,21 @@
 
     <ImageView
         android:id="@+id/weather_icon"
-        android:layout_width="271dp"
-        android:layout_height="284dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rain_6421608"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="70dp"
-        android:src="@drawable/sun_4478387" />
+        android:layout_centerVertical="true" />
 
     <TextView
         android:id="@+id/weather_location"
-        android:layout_width="62dp"
-        android:layout_height="34dp"
-        android:layout_below="@id/weather_icon"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="333dp"
-        android:layout_marginTop="-13dp"
-        android:text="Paris"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dubai"
+        android:textSize="18sp"
         android:textColor="@android:color/black"
-        android:textSize="20sp" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:layout_below="@id/weather_icon" />
 
 </RelativeLayout>
